@@ -7,7 +7,7 @@ ___
 
 ## Inleiding
 Reumatoïde artritis (RA) is een systemische auto immuunziekte die bij ongeveer 0,5–1 % van de bevolking voorkomt (Deane et al., 2017). De precieze oorzaak is nog onbekend, maar waarschijnlijk ontstaat RA door een combinatie van genetische aanleg, omgevingsfactoren (zoals roken) en een ontregeld immuunsysteem (Romão & Fonseca, 2021). Klinisch kenmerkt RA zich door synovitis, oftewel ontsteking van het gewrichtsslijmvlies, wat leidt tot gewrichtsschade. De diagnose wordt gesteld op basis van symptomen én de aanwezigheid van autoantistoffen zoals rheumatoid factor (RF) en ACPA (Deane et al., 2017). Hoewel RA niet kan worden genezen, kunnen medicijnen de symptomen vertragen en gewrichtsschade verminderen.
-Het doel van dit onderzoek is om de genexpressie te analyseren in patiënten met em zonder RA, specifiek binnen pathway hsa05323 (Rheumatoid arthritis), om beter inzicht te krijgen in de processen die meespelen, zodat de diagnose en behandeling (hopelijk verbeterd kunnen worden.
+Het doel van dit onderzoek is om de genexpressie te analyseren in patiënten met em zonder RA, specifiek binnen pathway hsa05323 (Rheumatoid arthritis), om beter inzicht te krijgen in de processen die meespelen, zodat de diagnose en behandeling verbeterd kunnen worden.
 
 ## Methode
 *+- 200 woorden met methode, flowschema. Zie leerdoelen voor mi-
