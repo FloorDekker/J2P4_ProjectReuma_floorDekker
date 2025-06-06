@@ -20,7 +20,7 @@ nimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.*
 *+- 200 woorden, inclusief aanbevelingen en onderzoek in context
 plaatsen*
 
-Leerdoelen die je moet beheersen (deze mag weg bij het inleveren)
+`Leerdoelen die je moet beheersen (deze mag weg bij het inleveren)`
 
 *(Schuin gaat over de inhoud
 van je project* en *dikgedrukt over de competentie beheren):*
