@@ -1,0 +1,173 @@
+setwd("C:/Users/floor/OneDrive/Bureaublad/J2P4_Reuma//")
+library(Rsubread)
+library(readr)
+library(dplyr)
+library(Rsamtools)
+library(DESeq2)
+library(KEGGREST)
+library(GO.db)
+library("goseq")
+library("geneLenDataBase")
+library("org.Dm.eg.db")
+library("org.Hs.eg.db")
+library(ggplot2)
+library(EnhancedVolcano)
+library(pathview)
+
+buildindex(
+  basename = 'ref_human',
+  reference = 'Homo_sapiens.GRCh38.dna.toplevel.fa.gz',
+  memory = 4000,
+  indexSplit = TRUE)
+
+#voor alle monsters
+align(index = "ref_human", readfile1 = "SRR4785819_1_subset40k.fastq", readfile2 = "SRR4785819_2_subset40k.fastq", output_file = "SRR4785819.BAM")
+align(index = "ref_human", readfile1 = "SRR4785820_1_subset40k.fastq", readfile2 = "SRR4785820_2_subset40k.fastq", output_file = "SRR4785820.BAM")
+align(index = "ref_human", readfile1 = "SRR4785828_1_subset40k.fastq", readfile2 = "SRR4785828_2_subset40k.fastq", output_file = "SRR4785828.BAM")
+align(index = "ref_human", readfile1 = "SRR4785831_1_subset40k.fastq", readfile2 = "SRR4785831_2_subset40k.fastq", output_file = "SRR4785831.BAM")
+align(index = "ref_human", readfile1 = "SRR4785979_1_subset40k.fastq", readfile2 = "SRR4785979_2_subset40k.fastq", output_file = "SRR4785979.BAM")
+align(index = "ref_human", readfile1 = "SRR4785980_1_subset40k.fastq", readfile2 = "SRR4785980_2_subset40k.fastq", output_file = "SRR4785980.BAM")
+align(index = "ref_human", readfile1 = "SRR4785986_1_subset40k.fastq", readfile2 = "SRR4785986_2_subset40k.fastq", output_file = "SRR4785986.BAM")
+align(index = "ref_human", readfile1 = "SRR4785988_1_subset40k.fastq", readfile2 = "SRR4785988_2_subset40k.fastq", output_file = "SRR4785988.BAM")
+
+#Controleren:
+file.exists("SRR4785986.BAM")
+= TRUE
+
+# Je definieert een vector met namen van BAM-bestanden. Elke BAM bevat reads van een RNA-seq-experiment (bijv. behandeld vs. controle).
+allsamples <- c("SRR4785819.BAM", "SRR4785820.BAM", "SRR4785828.BAM", "SRR4785831.BAM", "SRR4785979.BAM", "SRR4785980.BAM", "SRR4785986.BAM", "SRR4785988.BAM")
+
+count_matrix <- featureCounts(
+  files = allsamples,
+  annot.ext = "Homo_sapiens.GRCh38.114.gtf.gz",
+  isPairedEnd = TRUE,
+  isGTFAnnotationFile = TRUE,
+  GTF.attrType = "gene_id",
+  useMetaFeatures = TRUE
+)
+
+count_matrix <- read.table("count_matrix.txt", row.names = 1)
+write.csv(count_matrix, file = "count_matrix_goodrownames.csv")
+count_matrix <- read.csv("count_matrix_goodrownames.csv", row.names = 1)
+
+diagnostics <- c("normal", "normal", "normal", "normal", "reuma", "reuma", "reuma", "reuma" )
+diagnostics_table <- data.frame(diagnostics)
+rownames(diagnostics_table) <- c('SRR4785819', 'SRR4785820', 'SRR4785828', 'SRR4785831', 'SRR4785979', 'SRR4785980', 'SRR4785986', 'SRR4785988')
+
+dds <- DESeqDataSetFromMatrix(countData = round(count_matrix),
+                              colData = diagnostics_table,                         design = ~ diagnostics)
+dds <- DESeq(dds)
+resultaten <- results(dds)
+resultaten <- as.data.frame(resultaten)
+#rite.csv(resultaten, file = 'ResultatenReumaDds.csv')
+
+resultaten <- read.csv("ResultatenReumaDds.csv", row.names = 1)
+
+sum(resultaten$padj < 0.05 & resultaten$log2FoldChange > 1, na.rm = TRUE)
+#2085 aantal
+sum(resultaten$padj < 0.05 & resultaten$log2FoldChange < -1, na.rm = TRUE)
+#2487 aantal
+
+hoogste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = TRUE), ]
+laagste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = FALSE), ]
+laagste_p_waarde <- resultaten[order(resultaten$padj, decreasing = FALSE), ]
+
+#Rij namen van alle resultaten
+all <- rownames(resultaten)
+
+#filtreren op significante p waarde en een log2foldchange van boven de 1
+
+resultaten <- as.data.frame(resultaten)
+resultaten_filtered <- resultaten %>%
+  filter(padj < 0.05, log2FoldChange < -2 | log2FoldChange > 2)
+
+#filtreren op rownames
+DEG <- rownames(resultaten_filtered)
+
+gene.vector=as.integer(all%in%DEG)
+names(gene.vector)=all 
+#lets explore this new vector a bit
+head(gene.vector)
+tail(gene.vector)
+gene.vector
+pwf=nullp(gene.vector,"hg19","geneSymbol")
+
+#find enriched Go terms
+GO.wall=goseq(pwf,"hg19","geneSymbol")
+
+#How many enriched GO terms do we have
+class(GO.wall)
+head(GO.wall)
+nrow(GO.wall)
+
+#sorteren op significantie
+enriched.GO=GO.wall$category[GO.wall$over_represented_pvalue<.05]
+
+#How many GO terms do we have now?
+class(enriched.GO)
+head(enriched.GO)
+length(enriched.GO)
+
+capture.output(for(go in enriched.GO[1:258]) { print(GOTERM[[go]])
+  cat("--------------------------------------\n")
+}
+, file="SigGo.txt")
+
+write.csv(GO.wall, "pathways.csv")
+GO.wall <- read.csv("pathways.csv", row.names = 1)
+
+# Prepare a data frame with the top 10 GO terms based on p-value
+top10_GO <- GO.wall %>%
+  filter(over_represented_pvalue < 0.05) %>%
+  arrange(over_represented_pvalue) %>%
+  slice_head(n = 10)
+
+# Merge with GO term descriptions from GO.db
+top10_GO$term <- sapply(top10_GO$category, function(go_id) {
+  term <- Term(GOTERM[[go_id]])
+  if (is.null(term)) return(NA)
+  else return(term)
+})
+
+# Plot the top 10 GO terms
+ggplot(top10_GO, aes(x = reorder(term, -log10(over_represented_pvalue)),
+                     y = -log10(over_represented_pvalue))) +
+  geom_bar(stat = "identity", fill = "deeppink") +
+  coord_flip() +
+  labs(title = "Top 10 Enriched GO Terms",
+       x = "GO Term",
+       y = "-log10(P-value)") +
+  theme_minimal()
+
+#Visualisatie
+##vulcano plot
+if (!requireNamespace("EnhancedVolcano", quietly = TRUE)) {
+  BiocManager::install("EnhancedVolcano")
+}
+
+EnhancedVolcano(resultaten,
+                lab = rownames(resultaten),
+                x = 'log2FoldChange',
+                y = 'padj')
+# Alternatieve plot zonder p-waarde cutoff (alle genen zichtbaar)
+EnhancedVolcano(resultaten,
+                lab = rownames(resultaten),
+                x = 'log2FoldChange',
+                y = 'padj',
+                pCutoff = 0)
+#KEGG Pathway-analyse
+resultaten[1] <- NULL
+resultaten[2:5] <- NULL
+
+#alle humane pathways:
+human_pathways <- keggList("pathway", "hsa")
+#hsa05323: 	Rheumatoid arthritis
+
+pathview(
+  gene.data = resultaten,
+  pathway.id = "hsa05323",  # KEGG ID voor Biofilm formation – E. coli
+  species = "hsa",          # 'hsa' = human in KEGG
+  gene.idtype = "SYMBOL",     # Geef aan dat het KEGG-ID's zijn
+  limit = list(gene = 5)    # Kleurbereik voor log2FC van -5 tot +5
+)
+
