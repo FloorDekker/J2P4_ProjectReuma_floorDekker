@@ -59,7 +59,7 @@ dds <- DESeqDataSetFromMatrix(countData = round(count_matrix),
 dds <- DESeq(dds)
 resultaten <- results(dds)
 resultaten <- as.data.frame(resultaten)
-#rite.csv(resultaten, file = 'ResultatenReumaDds.csv')
+write.csv(resultaten, file = 'ResultatenReumaDds.csv')
 
 resultaten <- read.csv("ResultatenReumaDds.csv", row.names = 1)
 
