@@ -11,7 +11,7 @@ Het doel van dit onderzoek is om de genexpressie te analyseren in patiënten met
 
 ## Methode
 De RNA-seq-data van RA-patiënten en gezonde controles zijn geanalyseerd in R. Eerst werden de ruwe reads uitgelijnd op het humane referentiegenoom (GRCh38) met het `Rsubread-pakket`. Vervolgens werd een count matrix gegenereerd met `featureCounts`. Deze matrix werd ingelezen in `DESeq2` voor normalisatie en het identificeren van differentieel tot expressie gebrachte genen (DEGs). Genen met een aangepaste p-waarde < 0.05 en een log2-fold change > ±2 werden als significant beschouwd.
-De significante genen zijn vervolgens gekoppeld aan KEGG-pathways met het `clusterProfiler-pakket`, met specifieke focus op pathway hsa05323 (Rheumatoïde artritis). Daarnaast is een Gene Ontology (GO)-analyse uitgevoerd met `goseq` om betrokken biologische processen te identificeren. Visualisaties van de resultaten zijn gemaakt met `ggplot2` en `EnhancedVolcano`, en de pathway-activiteit werd in kaart gebracht met pathview.
+De significante genen zijn vervolgens gekoppeld aan KEGG-pathways met het `clusterProfiler-pakket`, met specifieke focus op *pathway hsa05323 (Rheumatoïde artritis)*. Daarnaast is een Gene Ontology (GO)-analyse uitgevoerd met `goseq` om betrokken biologische processen te identificeren. Visualisaties van de resultaten zijn gemaakt met `ggplot2` en `EnhancedVolcano`, en de pathway-activiteit werd in kaart gebracht met pathview.
 Een overzicht van de analyseworkflow is opgenomen in het flowschema bijgevoegd in `data`. Daarnaast zijn scripts, resultaten en data (ruwe data, resultaten en metadata gescheiden) beschikbaar. 
 
 
