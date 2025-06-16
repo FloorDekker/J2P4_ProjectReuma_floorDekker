@@ -18,20 +18,10 @@ Een overzicht van de methode is opgenomen in het bijgevoegde flowschema. De scri
 
 
 ## Resultaten
-+- 200 woorden, inclusief correcte verwijzingen
+De RNA-seq-analyse vond 4572 genen die anders tot expressie komen tussen RA-patiënten en gezonde controles. Hierbij is gebruik gemaakt van een statistische drempel (p-adj < 0,05) en een minimale verandering in genexpressie van vier keer hoger of lager. Van deze genen hadden 2085 genen een verhoogde expressie en 2487 een verlaagde bij RA. Voorbeelden van deze genen zijn SRGN, ZNF683 en BCL2A1 (afbeelding). Door eisen werden genen uitgesloten waarvan het verschil klein of toevallig is.
+GO-analyse onthulde immuun-gerelateerde processen zoals antigeenpresentatie en adaptieve immuniteit. De KEGG-pathway-mapping liet zien in het rood omcirkelde deel de activatie van de vroege ontstekingsproces zien; cellen presenteren antigenen aan CD4⁺ T-cellen, waarna deze cytokines (TNF-α, IL-6, IL-1β) produceren, met activatie van NF-κB en gewrichtsschade tot gevolg (Smolen et al., 2016).
+Hoewel SRGN, ZNF683 en BCL2A1 niet expliciet in de KEGG-pathway zijn opgenomen, zijn ze functioneel relevant binnen deze stap. SRGN speelt een rol in cytokinesecretie door immuuncellen (Wang et al., 2017), ZNF683 beïnvloedt T-celactiviteit (Zhu et al., 2018), en BCL2A1 helpt immuuncellen overleven tijdens ontsteking (Zhou et al., 2021).
 
 ## Conclusie
-*+- 200 woorden, inclusief aanbevelingen en onderzoek in context
-plaatsen*
-
-`Leerdoelen die je moet beheersen (deze mag weg bij het inleveren)`
-
-*(Schuin gaat over de inhoud
-van je project* en *dikgedrukt over de competentie beheren):*
-• *Je mapt reads met het Rsubread package in R
-• Je bepaalt verschillen in genexpressie met het DESeq2 package in R
-• Je bepaalt verschillen in KEGG pathways in R
-• Je bepaalt verschillen in gene ontologies in R*
-• **Je legt uit hoe je onderzoeksgegevens en scripts kan beheren
-• Je voert een project uit waarbij je als data steward de projectgegevens beheert
-• Je legt uit hoe je als data steward projectgegevens hebt beheerd**
+Met RNA-sequencing de genexpressie in RA-patiënten vergeleken met gezonde contro-les, specifiek gericht op genen binnen de RA-pathway. Er zijn 4572 genen gevonden met significant veranderde expressie, waaronder belangrijke immuun-gerelateerde genen zoals SRGN, ZNF683 en BCL2A1. De resultaten bevestigen dat verstoringen in immuunprocessen en ontstekingsroutes, zoals antigeenpresentatie en cytokinepro-ductie, een centrale rol spelen in RA. Deze resultaten geven een beter beeld bij wat er op moleculair gebied speelt bij RA en deze zouden kunnen bijdragen aan diagnostice-ren van patiënten en de behandelingen. 
+Voor vervolgonderzoek wordt aanbevolen om de rol van genen zoals SRGN, ZNF683 en BCL2A1 verder te onderzoeken, bijvoorbeeld in cellen of diermodellen. Daarnaast is het nuttig om genexpressiegegevens te combineren met klinische informatie, om beter te kunnen voorspellen hoe de ziekte zich ontwikkelt en hoe patiënten reageren op behan-delingen. 
