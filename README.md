@@ -4,9 +4,19 @@
 </p>
 
 ___
+## Inhoud
+- `data/raw/` – fictionele datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
+- `data/processed` - verwerkte datasets gegenereerd met scripts 
+- `scripts/` – scripts om prachtige onzin te genereren
+- `resultaten/` - grafieken en tabellen
+- `bronnen/` - gebruikte bronnen 
+- `README.md` - het document om de tekst hier te genereren
+- `assets/` - overige documenten voor de opmaak van deze pagina
+- `data_stewardship/` - Voor de competentie beheren ga je aantonen dat je projectgegevens kunt beheren met behulp van GitHub. In deze folder kan je hulpvragen terugvinden om je op gang te helpen met de uitleg van data stewardship.
 
+  
 ## Inleiding
-Reumatoïde Artritis (RA) is een systemische auto immuunziekte die bij ongeveer 0,5–1 % van de bevolking voorkomt [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf) . De precieze oorzaak is nog onbekend, maar waarschijnlijk ontstaat RA door een combinatie van genetische aanleg, omgevingsfactoren (zoals roken) en een ontregeld immuunsysteem [ (Scherer et al., 2020) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Klinisch kenmerkt RA zich door synovitis, oftewel ontsteking van het gewrichtsslijmvlies, wat leidt tot gewrichtsschade. De diagnose wordt gesteld op basis van symptomen én de aanwezigheid van autoantistoffen zoals rheumatoid factor (RF) en ACPA [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Hoewel RA niet kan worden genezen, kunnen medicijnen de symptomen vertragen en gewrichtsschade verminderen.
+Reumatoïde Artritis (RA) is een systemische auto immuunziekte die bij ongeveer 0,5–1 % van de bevolking voorkomt [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf) . De precieze oorzaak is nog onbekend, maar waarschijnlijk ontstaat RA door een combinatie van genetische aanleg, omgevingsfactoren (zoals roken) en een ontregeld immuunsysteem [ (Scherer et al., 2020) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Klinisch kenmerkt RA zich door ontsteking van het gewrichtsslijmvlies, wat leidt tot gewrichtsschade. De diagnose wordt gesteld op basis van symptomen én de aanwezigheid van autoantistoffen zoals rheumatoid factor (RF) en ACPA [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Hoewel RA niet kan worden genezen, kunnen medicijnen de symptomen vertragen en gewrichtsschade verminderen.
 Het doel van dit onderzoek is om de genexpressie te analyseren in patiënten met en zonder RA, specifiek binnen pathway hsa05323 (Rheumatoid arthritis), om beter inzicht te krijgen in de processen die meespelen, zodat de diagnose en behandeling verbeterd kunnen worden.
 
 ## Methode
