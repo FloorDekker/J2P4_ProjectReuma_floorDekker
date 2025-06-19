@@ -1,13 +1,8 @@
-Uitleg over een efficiënte en gestructureerde manier van beheren.
+Het bijhouden van een Github en een goed databeheer zorgt ervoor dat je overzicht houd en fouten voorkomt. Ook maakt het het repliceerbaar. Dit is te behalen door een duidelijke mappenstructuur te hebben zoals in dit verslag. Dan kan alles logisch opgeslagen, bijgehouden en snel tegevonden worden. 
+Daarnaast is het gebruik van een duidelijke bestandnaam erg handig, bijvoorbeeld exact beschrijven wat de inhoud van het bestand is. Dan kan voorkomen worden dat perongelijk gewerkt wordt met verkeerde bestanden. 
+Een versiebeheer is handig om bij te houden welke veranderingen er zijn gedaan in bijvoorbeeld het script. Dit kan door andere versienummers te gebruiken. Of het bijhouden van de Github, hierin kun je de wijzigingen een naam geven. 
+Om in het script goede documentatie te hebben kan een # gebruikt worden. Dit wordt niet meegenomen in het script maar legt wel uit wat het doet.
+Met bijvoorbeeld Github kunnen scripts gedeeld worden. 
+Voor de analyse worden meerdere tools gebruikt worden, zoals R op python. Deze scripts kunnen opgeslagen worden. Dit kan in een beveiligde map. Zeker voor persoonlijke data is dit erg belangrijk.
+Ook kan data opengezet worden, en dus gepubliceerd worden. Dit is zodat andere deze kunnen bekijken en gebruiken. Dit mdraagt bij aan de wetenschap, andere kunnen namenlijk verder bouwen op het gepubliseerde werk.
 
-Enkele hulpvragen staan hieronder weergeven. Dit zijn enkele voorbeelden om te schetsen wat er van je verwacht wordt. Denk dus ook zelf goed na over het beheren van data, het belang hiervan en hoe je dat vorm kunt geven!
-
-Waarom is dit een belangrijk onderdeel van onderzoek doen?
-Wat is een duidelijke mappenstructuur en waarom houd je dat aan?
-Wat is een handige manier voor de naamgeving van bestanden en waarom?
-Wat houdt versiebeheer in en waarom doe je dit?
-Hoe zorg je voor goede documentatie in scripts?
-Wat voor platforms kan je gebruiken om scripts te delen?
-Welke tools gebruik je voor data-analyse, zoals bijvoorbeeld voor het veilig opslaan van data?
-Hoe zou je omgaan met gevoelige of persoonlijke data?
-Wat is het belang van open data en het publiceren van datasets?

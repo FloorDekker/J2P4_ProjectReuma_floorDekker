@@ -1,4 +1,8 @@
 # RNA-sequencing toont veranderingen in genexpressie en immuunactivatie bij reumatoïde artritis.
+<p align="center">
+  <img src="assets/reuma.jpeg" alt="reuma" width="200" />
+</p>
+
 ___
 ## Inhoud
 - `data/ruwe data/` – datasets voor de analyse van de gekregen monsters
@@ -20,7 +24,7 @@ De RNA-seq-data van patiënten met *Reumatoïde Artritis (RA)* en gezonde contro
 Deze matrix is geanalyseerd met `DESeq2 (v1.48.1)`, waarmee de gegevens zijn genormaliseerd en is bepaald welke genen significant anders tot expressie komen tussen de groepen (de zogenaamde differentieel tot expressie gebrachte genen, DEGs). Genen met een aangepaste p-waarde < 0.05 en een absolute log2-fold change > 2 zijn als significant beschouwd.
 De gevonden DEGs zijn gekoppeld aan biologische processen via een *Gene Ontology (GO)-verrijkingsanalyse*, uitgevoerd met `goseq (v1.60.0)`. Hierbij is gecorrigeerd voor genlengtebias (een effect waarbij langere genen vaker als significant worden gedetecteerd) met behulp van `nullp()`. De verrijkte GO-termen zijn gebaseerd op `GO.db (v3.21.0)` en humane genannotaties uit `org.Hs.eg.db (v3.21.0)`.
 Visualisaties van de resultaten zijn gemaakt met `ggplot2 (v3.5.2)` en `EnhancedVolcano (v1.26.0)`, en de pathway-activiteit is in kaart gebracht met `pathview (v1.48.0)`, met specifieke focus op *KEGG-pathway hsa05323 (Reumatoïde artritis)*.
-Een overzicht van de methode is opgenomen in het bijgevoegde flowschema. De [ scripts ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Script) ,[ ruwe data ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/Data/ruwe%20data),[ resultaten ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/resultaten) en [ bronnen ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf) zijn afzonderlijk beschikbaar, zorgvuldig opgeslagen en bijgehouden volgens de richtlijnen voor [ data stewardship ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/Data_stewardship).
+Een overzicht van de methode is opgenomen in het bijgevoegde [ flowschema ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/assets/flowschema%20methode.png). De [ scripts ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Script) ,[ ruwe data ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/Data/ruwe%20data),[ resultaten ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/resultaten) en [ bronnen ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf) zijn afzonderlijk beschikbaar, zorgvuldig opgeslagen en bijgehouden volgens de richtlijnen voor [ data stewardship ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/tree/main/Data_stewardship).
 
 ## Resultaten
 De RNA-seq-analyse vond 4572 genen die anders tot expressie komen tussen RA-patiënten en gezonde controles. Hierbij is gebruik gemaakt van een statistische drempel (p-adj < 0,05) en een minimale verandering in genexpressie van vier keer hoger of lager. Van deze genen hadden 2085 genen een verhoogde expressie en 2487 een verlaagde bij RA. Voorbeelden van deze genen zijn SRGN, ZNF683 en BCL2A1 [ Volcano plot ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/resultaten/Vulcano.png). Door eisen werden genen uitgesloten waarvan het verschil klein of toevallig is.

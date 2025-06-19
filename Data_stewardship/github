@@ -1,3 +1,6 @@
-Uitleg over hoe je GitHub hebt gebruikt.
+Voor dit project heb ik GitHub gebruikt om alle bestanden overzichtelijk en reproduceerbaar op te slaan. Op mijn GitHub-pagina zijn de scripts, ruwe data, resultaten en bronnen duidelijk gescheiden in aparte mappen. Zo is voor elke iedereen en mijzelf meteen zichtbaar waar wat staat en makkelijker maakt.
+In de README heb ik uitgelegd wat elk script doet en in welke volgorde je het kunt uitvoeren. Met hierbij de versie zodat het repliceerbaar is. 
+Met versiebeheer via Github houd ik bij welke veranderingen zijn aangebracht, en wanneer, deze heb ik dan een samenvattende naam gegeven. Hierdoor is het mogelijk om terug te gaan naar eerdere versies als dat nodig is.
+De structuur van de mappen is logisch opgebouwd (bijvoorbeeld: /Data, /Scripts, /Resultaten), en de bestandsnamen bevatten een duidelijke beschrijving.
+Hier is het project goed gedocumenteerd, gestructureerd en eenvoudig te reproduceren. Iemand anders zou het onderzoek makkelijk kunnen overnemen of controleren met behulp van mijn GitHub-pagina.
 
-Je voert een project uit waarbij je als data steward projectgegevens beheert. Leg uit hoe je dat hebt gedaan met behulp van GitHub. Maak duidelijk hoe jouw pagina bijdraagt aan reproduceerbaarheid van je data. Kan je bijvoorbeeld alles makkelijk terugvinden? Is het makkelijk te gebruiken als iemand anders dit onderzoek gaat uitvoeren met behulp van jouw GitHub pagina? Hoe heb je gezorgd voor een duidelijke structuur? Hoe heb je gewerkt aan versiebeheer? Dit zijn enkele voorbeeldvragen om een beeld te schetsen.
