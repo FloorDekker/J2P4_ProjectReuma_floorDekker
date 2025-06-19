@@ -5,8 +5,8 @@
 
 ___
 ## Inhoud
-- `data/raw/` – datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
-- `data/processed` - verwerkte datasets gegenereerd met scripts 
+- `data/ruwe data/` – datasets voor de analyse van de gekregen monsters
+- `data/cleaned data` - verwerkte datasets gegenereerd met scripts
 - `scripts/` – scripts die gebruikt zijn om deze resultaten te generen
 - `resultaten/` - grafieken en tabellen
 - `bronnen/` - gebruikte bronnen 
