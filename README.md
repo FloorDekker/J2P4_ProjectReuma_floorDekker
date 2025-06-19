@@ -1,4 +1,8 @@
 # RNA-sequencing toont veranderingen in genexpressie en immuunactivatie bij reumatoïde artritis.
+<p align="center">
+  <img src="assets/reuma.jpeg" alt="reuma" width="200" />
+</p>
+
 ___
 ## Inhoud
 - `data/ruwe data/` – datasets voor de analyse van de gekregen monsters
