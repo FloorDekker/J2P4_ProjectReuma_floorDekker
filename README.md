@@ -1,8 +1,4 @@
-# Reumatoïde Artritis
-<p align="center">
-  <img src="assets/DNA.png" alt="Dubbel strengs DNA" width="200" />
-</p>
-
+# Bij reumatoïde artritis toont RNA-sequencing veranderingen in genexpressie en immuunactivatie
 ___
 ## Inhoud
 - `data/ruwe data/` – datasets voor de analyse van de gekregen monsters
@@ -13,7 +9,7 @@ ___
 - `README.md` - het document waar het 'verslag' opgesteld, en resultaten/conclusies zijn uitgewerkt
 - `assets/` - overige documenten voor de opmaak van deze pagina zoals afbeeldingen
 - `data_stewardship/` - hier is beschreven hoe de projectgegevens zijn beheerd met behulp van Github.  
-
+___
   
 ## Inleiding
 Reumatoïde Artritis (RA) is een systemische auto immuunziekte die bij ongeveer 0,5–1 % van de bevolking voorkomt [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf) . De precieze oorzaak is nog onbekend, maar waarschijnlijk ontstaat RA door een combinatie van genetische aanleg, omgevingsfactoren en een ontregeld immuunsysteem [ (Scherer et al., 2020) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Klinisch kenmerkt RA zich door ontstekingen van het gewrichtsslijmvlies, wat leidt tot gewrichtsschade. De diagnose wordt gesteld op basis van symptomen én de aanwezigheid van auto-antistoffen zoals rheumatoid factor (RF) en ACPA [ (Deane et al., 2017) ](https://github.com/FloorDekker/J2P4_ProjectReuma_floorDekker/blob/main/Bronnen_Transcriptomics.pdf). Hoewel RA niet kan worden genezen, kunnen medicijnen de symptomen vertragen en gewrichtsschade verminderen.
