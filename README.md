@@ -2,7 +2,7 @@
 ___
 ## Inhoud
 - `data/ruwe data/` – datasets voor de analyse van de gekregen monsters
-- `data/cleaned data` - verwerkte datasets gegenereerd met scripts
+- `data/cleaned data/` - verwerkte datasets gegenereerd met scripts
 - `scripts/` – scripts die gebruikt zijn om deze resultaten te generen
 - `resultaten/` - grafieken en tabellen
 - `bronnen/` - gebruikte bronnen 
